@@ -66,11 +66,11 @@ AWSError<CoreErrors> GetErrorForName(const char* errorName)
   }
   else if (hashCode == LIMIT_EXCEEDED_HASH)
   {
-    return AWSError<CoreErrors>(static_cast<CoreErrors>(CognitoIdentityErrors::LIMIT_EXCEEDED), true);
+    return AWSError<CoreErrors>(static_cast<CoreErrors>(CognitoIdentityErrors::LIMIT_EXCEEDED), false);
   }
   else if (hashCode == TOO_MANY_REQUESTS_HASH)
   {
-    return AWSError<CoreErrors>(static_cast<CoreErrors>(CognitoIdentityErrors::TOO_MANY_REQUESTS), true);
+    return AWSError<CoreErrors>(static_cast<CoreErrors>(CognitoIdentityErrors::TOO_MANY_REQUESTS), false);
   }
   else if (hashCode == CONCURRENT_MODIFICATION_HASH)
   {

@@ -71,7 +71,7 @@ AWSError<CoreErrors> GetErrorForName(const char* errorName)
   }
   else if (hashCode == LIMIT_EXCEEDED_HASH)
   {
-    return AWSError<CoreErrors>(static_cast<CoreErrors>(IAMErrors::LIMIT_EXCEEDED), true);
+    return AWSError<CoreErrors>(static_cast<CoreErrors>(IAMErrors::LIMIT_EXCEEDED), false);
   }
   else if (hashCode == CONCURRENT_MODIFICATION_HASH)
   {
